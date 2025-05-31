@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap');
-*{
+* {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
@@ -92,14 +92,18 @@ header.shadow {
     font-size: 22px;
     cursor: pointer;
     z-index: 100000;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 #menu-icon{
     display: none;
 }
 .search-box {
+    display: none;
     position: absolute;
-    top: 110%;
-    right: -100%;
+    top: 0%;
+    right: 0%;
 }
 .search-box input {
     padding: 10px;
@@ -110,14 +114,14 @@ header.shadow {
     box-shadow: var(--box-shadow);
 }
 .search-box.active {
-    right: 1rem;
-    transition: all 0.2s ease-in-out;
+    display: block;
+    right: 0;
 }
 .cart {
     position: absolute;
-    top: 110%;
-    right: -100%;
-    display: flex;
+    top: 0%;
+    right: 0%;
+    display: none;
     flex-direction: column;
     align-items: center;
     row-gap: 0.5rem;
@@ -148,14 +152,13 @@ header.shadow {
     font-weight: 600;
 }
 .cart.active {
-    right: 1rem;
-    transition: all 0.2s ease-in-out;
+    display: flex;
 }
 .user{
     position: absolute;
-    right: -100%;
-    top: 110%;
-    display: flex;
+    right: 0%;
+    top: 0%;
+    display: none;
     flex-direction: column;
     align-items: center;
     row-gap: 0.5rem;
@@ -195,8 +198,7 @@ header.shadow {
     color: var(--main-color);
 }
 .user.active { 
-    right: 1rem;
-    transition: all 0.2s ease-in-out;
+    display: flex;
 }
 .home{
     width: 100%;
@@ -420,22 +422,21 @@ header.shadow {
     }
 }
 header .navbar {
-    position: absolute;
-    width: 240px;
-    height: 100vh;
-    top: 100%;
-    right: -100%;
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    right: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background: var(--big-color);
     row-gap: 1.4rem;
     padding: 20px;
-    box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
-    transition: 0.2s linear;
-    text-align: left;
+    justify-content: center;
 }
-.navbar .active{
-    right: 0;
+
+.navbar.active {
+    display: flex;
 }
 .home-text {
     font-size: 2rem;

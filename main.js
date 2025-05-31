@@ -1,5 +1,8 @@
 
 let search = document.querySelector('.search-box');
+let cart = document.querySelector('.cart');
+let user = document.querySelector('.user');
+let navbar = document.querySelector('.navbar');
 
 document.querySelector('#search-icon').onclick = () =>{
    search.classList.toggle('active');
@@ -7,7 +10,6 @@ document.querySelector('#search-icon').onclick = () =>{
    user.classList.remove('active');
    navbar.classList.remove('active');
 }
-let cart = document.querySelector('.cart');
 
 document.querySelector('#cart-icon').onclick = () =>{
    cart.classList.toggle('active');
@@ -15,7 +17,6 @@ document.querySelector('#cart-icon').onclick = () =>{
    user.classList.remove('active');
    navbar.classList.remove('active');
 }
-let user = document.querySelector('.user');
 
 document.querySelector('#user-icon').onclick = () =>{
    user.classList.toggle('active');
@@ -23,7 +24,6 @@ document.querySelector('#user-icon').onclick = () =>{
    cart.classList.remove('active');
    navbar.classList.remove('active');
 }
-document.querySelector('.navbar').style.display = 'none';
 
 document.querySelector('#menu-icon').onclick = () =>{
    navbar.classList.toggle('active');
